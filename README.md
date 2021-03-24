@@ -8,6 +8,7 @@
 2. Buildez le docker : ```docker-compose build```
 3. Lancez le docker : ```docker-compose up```
 4. Copiez le .env.example et renommez le .env
+5. Lancez ```composer install```
 4. Lancez la commande ```docker-compose exec php php artisan key:generate```
 5. Lancez la commande ```docker-compose exec php php artisan storage:link```
 6. Lancez la commande pour créer les tables : ```docker-compose exec php php artisan migrate```
