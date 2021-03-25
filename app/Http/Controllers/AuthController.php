@@ -29,9 +29,9 @@ class AuthController extends Controller
 
     if(isset($user[0]) && $user[0]['password'] === md5($request->password)){
       \Auth::loginUsingId($user[0]['id']);
-
-      return redirect()->route('admin.index');
+      return redirect()->route('admin.index')->withCookie(cookie('id', $user[0]['id'], 3600000));
     }
+
 
     return back()->withErrors(['login' => 'Les identifiants fournis ne correspondent pas à nos données']);
   }

@@ -16,7 +16,6 @@ class SecureAuth
      */
     public function handle(Request $request, Closure $next)
     {
-
         if(!isset($_COOKIE['id'])){
             return redirect()->route('login')->withErrors(['login' => 'Veuillez vous connecter']);;
         }
@@ -27,6 +26,7 @@ class SecureAuth
         {
             \Auth::loginUsingId($user->id);
         }
+
 
         return $next($request);
     }

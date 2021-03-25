@@ -33,7 +33,7 @@
                   </li>
                   @if(\Auth::user())
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.index') }}">Administration</a>
+                    <a class="nav-link" href="{{ route('admin.index') }}">Admin</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}">

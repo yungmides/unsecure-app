@@ -29,7 +29,7 @@ Route::middleware('guest')->group(function() {
 });
 
 Route::middleware('auth')->group(function() {
+  Route::get('/admin', [ AdminController::class, 'index'])->name('admin.index');
   Route::post('admin/add-article', [ AdminController::class, 'addArticle'])->name('admin.article.add');
-  Route::get('admin', [ AdminController::class, 'index'])->name('admin.index');
   Route::delete('admin/delete-article', [ AdminController::class, 'index'])->name('admin.article.delete');
 });
