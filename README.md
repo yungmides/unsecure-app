@@ -1,6 +1,13 @@
 # Unsecure Project
 
+## Correctif par le groupe 11
 
+- Alexandre TROUVE
+- Oliwier MAZIARZ
+- Fantin RAIMBAULT
+- Mehdi SABER
+
+Toutes les corrections ne sont pas présentes mais on a essayé d'en implémenter le plus possible.
 ## Pour lancer le projet
 
 

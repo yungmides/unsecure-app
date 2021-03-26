@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->text('content')->nullable();
+            $table->string('author');
             $table->timestamps();
         });
     }

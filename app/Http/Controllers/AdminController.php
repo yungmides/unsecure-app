@@ -17,11 +17,16 @@ class AdminController extends Controller
 
   public function addArticle(Request $request)
   {
-      $article = new Article;
-      $article->content = $request->content;
-      $article->title = $request->title;
-      $article->save();
 
-      return redirect()->route('home');
+      if (hash_equals(csrf_token(), $request->_token)) {
+          $article = new Article;
+          $article->content = htmlspecialchars($request->content);
+          $article->title = htmlspecialchars($request->title);
+          $article->save();
+          return redirect()->route('home');
+      }
+      return back()->withErrors(['csrf' => "Une erreur s'est produite ! Veuillez vous reconnecter"]);
+
+
   }
 }
