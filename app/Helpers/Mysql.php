@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Helpers;
-
+// Cette classe ne sert désormais à rien, vu qu'on décide d'utiliser la facade DB native de Laravel, mais elle est présente pour postérité.
 class Mysql
 {
   public $conn;

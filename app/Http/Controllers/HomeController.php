@@ -10,8 +10,9 @@ class HomeController extends Controller
 {
   public function home(Request $request)
   {
-    $articles = Article::orderBy('created_at', 'DESC')->simplePaginate(10);
 
+//    $articles = Article::orderBy('created_at', 'DESC')->simplePaginate(10);
+    $articles = Article::query()->orderBy('created_at', 'desc')->simplePaginate(10);
     return view('welcome', ['articles' => $articles]);
   }
 
