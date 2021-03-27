@@ -18,7 +18,7 @@ class AdminController extends Controller
   public function addArticle(Request $request)
   {
 
-      if (hash_equals(csrf_token(), $request->_token)) {
+      if (hash_equals($request->session()->token(), $request->_token)) {
           $article = new Article;
           $article->content = htmlspecialchars($request->content);
           $article->title = htmlspecialchars($request->title);
